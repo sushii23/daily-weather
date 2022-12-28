@@ -1,9 +1,10 @@
+// Global variables
 var searchHistory = [];
 var weatherApiRootUrl = 'https://api.openweathermap.org';
 var weatherApiKey = 'd91f911bcf2c0f925fb6535547a5ddc9';
 
 // DOM element references
-var searchForm = document.querySelector('#search-form');
+var searchForm = document.querySelector('#city-form');
 var searchInput = document.querySelector('#search-input');
 var todayContainer = document.querySelector('#today');
 var forecastContainer = document.querySelector('#forecast');
@@ -252,11 +253,5 @@ function handleSearchHistoryClick(e) {
 }
 
 initSearchHistory();
-searchForm.addEventListener("submit", handleSearchFormSubmit);
+searchForm.addEventListener('submit', handleSearchFormSubmit);
 searchHistoryContainer.addEventListener('click', handleSearchHistoryClick);
-
-
-
-
-  
-
