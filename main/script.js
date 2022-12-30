@@ -14,11 +14,11 @@ var searchHistoryContainer = document.querySelector('#history');
 dayjs.extend(window.dayjs_plugin_utc);
 dayjs.extend(window.dayjs_plugin_timezone);
 
-// Function to display the search history list.
+// Function that displays the search history list.
 function renderSearchHistory() {
   searchHistoryContainer.innerHTML = '';
 
-  // Start at end of history array and count down to show the most recent at the top.
+  // the loop starts at end of history array and count down to show the most recent at the top.
   for (var i = searchHistory.length - 1; i >= 0; i--) {
     var btn = document.createElement('button');
     btn.setAttribute('type', 'button');
@@ -53,7 +53,7 @@ function initSearchHistory() {
   renderSearchHistory();
 }
 
-// Function to display the current weather data fetched from OpenWeather api.
+// Function to show the current weather data fetched from OpenWeather api.
 function renderCurrentWeather(city, weather, timezone) {
   var date = dayjs().tz(timezone).format('M/D/YYYY');
 
