@@ -5,8 +5,8 @@ var weatherApiKey = 'd91f911bcf2c0f925fb6535547a5ddc9';
 
 // DOM element references
 var searchForm = document.querySelector('#city-form');
-var searchInput = document.querySelector('#search-input');
-var todayContainer = document.querySelector('#today');
+var searchInput = document.querySelector('#search-selection');
+var todayContainer = document.querySelector('#current');
 var forecastContainer = document.querySelector('#forecast');
 var searchHistoryContainer = document.querySelector('#history');
 
@@ -22,7 +22,7 @@ function renderSearchHistory() {
   for (var i = searchHistory.length - 1; i >= 0; i--) {
     var btn = document.createElement('button');
     btn.setAttribute('type', 'button');
-    btn.setAttribute('aria-controls', 'today forecast');
+    btn.setAttribute('aria-controls', 'current forecast');
     btn.classList.add('history-btn', 'btn-history');
 
     // `data-search` allows access to city name when click handler is invoked
