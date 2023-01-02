@@ -8,7 +8,7 @@ var cityForm = document.querySelector('#city-form');
 var searchSelection = document.querySelector('#search-selection');
 var currentContainer = document.querySelector('#current');
 var forecastContainer = document.querySelector('#forecast');
-var searchHistoryContainer = document.querySelector('#history');
+var cityHistoryContainer = document.querySelector('#history');
 
 // Add timezone plugins to day.js
 dayjs.extend(window.dayjs_plugin_utc);
@@ -16,7 +16,7 @@ dayjs.extend(window.dayjs_plugin_timezone);
 
 // Function that displays the search history list.
 function renderSearchHistory() {
-  searchHistoryContainer.innerHTML = '';
+  cityHistoryContainer.innerHTML = '';
 
   // the loop starts at end of history array and count down to show the most recent at the top.
   for (var i = searchHistory.length - 1; i >= 0; i--) {
@@ -28,7 +28,7 @@ function renderSearchHistory() {
     // `data-search` allows access to city name when click handler is invoked
     btn.setAttribute('data-search', searchHistory[i]);
     btn.textContent = searchHistory[i];
-    searchHistoryContainer.append(btn);
+    cityHistoryContainer.append(btn);
   }
 }
 
@@ -109,8 +109,8 @@ function renderCurrentWeather(city, weather, timezone) {
   uvEl.append(uviBadge);
   cardBody.append(uvEl);
 
-  todayContainer.innerHTML = '';
-  todayContainer.append(card);
+  currentContainer.innerHTML = '';
+  currentContainer.append(card);
 }
 
 // Function to display a forecast card given an object from open weather api
@@ -254,4 +254,4 @@ function handleSearchHistoryClick(e) {
 
 initSearchHistory();
 cityForm.addEventListener('submit', handlecityFormSubmit);
-searchHistoryContainer.addEventListener('click', handleSearchHistoryClick);
+cityHistoryContainer.addEventListener('click', handleSearchHistoryClick);
