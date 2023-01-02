@@ -1778,9 +1778,9 @@ label form [type='radio'] {
 
 .weather-head {
   background: #20084a;
-  background: -webkit-linear-gradient(right, #20084a, #3463bc);
-  background: -moz-linear-gradient(right, #20084a, #3463bc);
-  background: linear-gradient(to left, #20084a, #3463bc);
+  background: -webkit-linear-gradient(right, #20084a, #4c80df);
+  background: -moz-linear-gradient(right, #20084a, #2a4577);
+  background: linear-gradient(to left, #20084a, #2d5091);
 }
 
 
