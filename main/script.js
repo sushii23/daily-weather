@@ -4,9 +4,9 @@ var weatherApiRootUrl = 'https://api.openweathermap.org';
 var weatherApiKey = 'd91f911bcf2c0f925fb6535547a5ddc9';
 
 // DOM element references
-var searchForm = document.querySelector('#city-form');
-var searchInput = document.querySelector('#search-selection');
-var todayContainer = document.querySelector('#current');
+var cityForm = document.querySelector('#city-form');
+var searchSelection = document.querySelector('#search-selection');
+var currentContainer = document.querySelector('#current');
 var forecastContainer = document.querySelector('#forecast');
 var searchHistoryContainer = document.querySelector('#history');
 
@@ -229,16 +229,16 @@ function fetchCoords(search) {
     });
 }
 
-function handleSearchFormSubmit(e) {
+function handlecityFormSubmit(e) {
   // Don't continue if there is nothing in the search form
-  if (!searchInput.value) {
+  if (!searchSelection.value) {
     return;
   }
 
   e.preventDefault();
-  var search = searchInput.value.trim();
+  var search = searchSelection.value.trim();
   fetchCoords(search);
-  searchInput.value = '';
+  searchSelection.value = '';
 }
 
 function handleSearchHistoryClick(e) {
@@ -253,5 +253,5 @@ function handleSearchHistoryClick(e) {
 }
 
 initSearchHistory();
-searchForm.addEventListener('submit', handleSearchFormSubmit);
+cityForm.addEventListener('submit', handlecityFormSubmit);
 searchHistoryContainer.addEventListener('click', handleSearchHistoryClick);
