@@ -14,3 +14,32 @@ form {
   justify-content: center;
   margin-top: 1rem;
 }
+
+label {
+  margin-right: 1rem;
+}
+
+#current-weather {
+  background-color: whitesmoke;
+  padding: 1rem;
+  text-align: center;
+}
+
+#forecast {
+  background-color: whitesmoke;
+  padding: 1rem;
+  text-align: center;
+}
+
+#forecast-days {
+  display: flex;
+  justify-content: center;
+}
+
+.forecast-day {
+  background-color: whitesmoke;
+  margin: 0 1rem;
+  padding: 1rem;
+  text-align: center;
+  width: 20%;
+}
