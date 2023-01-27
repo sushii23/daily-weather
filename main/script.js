@@ -1,7 +1,7 @@
 const apiKey = "26cabfa2af3c8ae91ce6cf22b5818b17";
 
 const searchForm = document.getElementById("search-form");
-const cityInput = document.getElementById("city-input");
+const citySearch = document.getElementById("city-search");
 const currentWeather = document.getElementById("current-weather");
 const forecast = document.getElementById("forecast");
 const cityName = document.getElementById("city-name");
@@ -14,7 +14,7 @@ const weatherIcon = document.getElementById("weather-icon");
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const city = cityInput.value;
+  const city = citySearch.value;
 
   getCurrentWeather(city);
   getFiveDayForecast(city);
