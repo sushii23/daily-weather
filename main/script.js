@@ -36,3 +36,8 @@ function getCurrentWeather(city) {
   })
   .catch((error) => console.log(error));
 }
+
+function getFiveDayForecast(city) {
+  fetch(
+    `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`
+  )
