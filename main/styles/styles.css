@@ -43,3 +43,14 @@ label {
   text-align: center;
   width: 20%;
 }
+
+#search-history {
+  background-color: whitesmoke;
+  padding: 1rem;
+  text-align: center;
+}
+
+#city-list {
+  list-style-type: none;
+  padding: 0;
+}
