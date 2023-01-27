@@ -9,3 +9,13 @@ const date = document.getElementById("date");
 const temperature = document.getElementById("temperature");
 const humidity = document.getElementById("humidity");
 const windspeed = document.getElementById("wind-speed");
+
+searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const city = cityInput.value;
+
+  getCurrentWeather(city);
+  getFiveDayForecast(city);
+});
+
